@@ -1,0 +1,29 @@
+.root {
+  $[data-variant='default'] {
+  }
+
+  &[data-variant='light'] {
+    color: var(--mantine-primary-color-7);
+    background-color: var(--mantine-primary-color-1);
+
+    border: 1px solid var(--mantine-primary-color-4);
+
+    &:hover {
+      color: var(--mantine-primary-color-8);
+      background-color: var(--mantine-primary-color-2);
+    }
+  }
+
+  /* New variant for button */
+  &[data-variant='danger'] {
+    color: var(--mantine-color-red-7);
+    background-color: var(--mantine-color-red-1);
+
+    border: 1px solid var(--mantine-color-red-4);
+
+    &:hover {
+      color: var(--mantine-color-red-8);
+      background-color: var(--mantine-color-red-2);
+    }
+  }
+}
