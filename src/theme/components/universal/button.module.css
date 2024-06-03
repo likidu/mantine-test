@@ -1,5 +1,5 @@
 .root {
-  $[data-variant='default'] {
+  &[data-variant='default'] {
   }
 
   &[data-variant='light'] {

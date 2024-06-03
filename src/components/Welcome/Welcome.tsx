@@ -1,4 +1,4 @@
-import { Anchor, Button, Input, Text, Title } from '@mantine/core';
+import { Anchor, Badge, Button, Text, Title } from '@mantine/core';
 import classes from './Welcome.module.css';
 
 export function Welcome() {
@@ -18,27 +18,11 @@ export function Welcome() {
         </Anchor>
         . To get started edit pages/Home.page.tsx file.
       </Text>
-
       <p>
-        <Button size="sm">Create cluster</Button>
+        <Button variant="default">Hello world</Button>
       </p>
       <p>
-        <Button>Create cluster</Button>
-      </p>
-      <p>
-        <Button size="lg">Create cluster</Button>
-      </p>
-      <p>
-        <Button variant="light">Create cluster</Button>
-      </p>
-      <p>
-        <Button variant="danger">Create cluster</Button>
-      </p>
-      <p>
-        <Button variant="default">Create cluster</Button>
-      </p>
-      <p>
-        <Input variant="filled" placeholder="Underline input" />
+        <Badge>A badge</Badge>
       </p>
     </>
   );
