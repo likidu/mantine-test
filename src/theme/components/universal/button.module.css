@@ -1,4 +1,9 @@
 .root {
+  &:focus {
+    outline: 3px solid var(--mantine-color-focus-ring);
+    outline-offset: 0;
+  }
+
   &[data-variant='default'] {
   }
 

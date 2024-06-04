@@ -1,5 +1,5 @@
 import { MantineProvider, useMantineColorScheme } from '@mantine/core';
-import '@mantine/core/styles.css';
+import '@mantine/core/styles.layer.css';
 import {
   Controls,
   Description,
@@ -19,7 +19,7 @@ import { theme } from '../src/theme';
 
 const channel = addons.getChannel();
 
-function sendDarkModelEvent(callback: Function) {
+function sendDarkModelEvent(callback: any) {
   useEffect(() => {
     channel.on(DARK_MODE_EVENT_NAME, callback);
     return () => channel.off(DARK_MODE_EVENT_NAME, callback);

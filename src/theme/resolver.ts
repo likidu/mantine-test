@@ -3,7 +3,9 @@
 import { CSSVariablesResolver } from '@mantine/core';
 
 export const resolver: CSSVariablesResolver = (theme) => ({
-  variables: {},
+  variables: {
+    '--mantine-color-focus-ring': theme.colors.brand[4],
+  },
   light: {
     '--mantine-color-default-color': theme.colors.red[5],
   },
