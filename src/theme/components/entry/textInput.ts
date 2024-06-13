@@ -1,4 +1,5 @@
 import { TextInput, createTheme, rem } from '@mantine/core';
+import classes from './textInput.module.css';
 
 export const textInput = createTheme({
   components: {
@@ -8,6 +9,7 @@ export const textInput = createTheme({
       },
 
       /* Override variants */
+      classNames: classes,
 
       /* Override the sm, md, lg  */
       vars: (_, props) => {

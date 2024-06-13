@@ -1,0 +1,25 @@
+.root {
+  border-left-width: 2px;
+  border-left-style: solid;
+
+  /* TODO: Use CSSVariableResolver to override the default color variables they use. */
+  &[data-type='primary'] {
+    border-left-color: var(--mantine-color-primary-6);
+  }
+  &[data-type='info'] {
+    border-left-color: var(--mantine-color-gray-6);
+  }
+  &[data-type='success'] {
+    border-left-color: var(--mantine-color-green-6);
+  }
+  &[data-type='warning'] {
+    border-left-color: var(--mantine-color-yellow-6);
+  }
+  &[data-type='error'] {
+    border-left-color: var(--mantine-color-red-6);
+  }
+}
+
+.icon {
+  margin-inline-end: var(--mantine-spacing-xs);
+}

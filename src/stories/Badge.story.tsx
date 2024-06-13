@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 const meta: Meta<typeof Badge> = {
   title: 'Design System/Display/Badge',
   component: Badge,
-  render: ({ ...args }) => <Badge {...args}>A badge</Badge>,
+  render: ({ ...args }) => <Badge {...args}>Beta</Badge>,
   args: {
     variant: 'default',
   },

@@ -1,0 +1,6 @@
+.input {
+  &:focus-within {
+    outline: 3px solid var(--mantine-color-focus-ring);
+    outline-offset: 0;
+  }
+}

@@ -3,7 +3,7 @@ import { DEFAULT_THEME, createTheme, mergeThemeOverrides } from '@mantine/core';
 import { resolver as variablesResolver } from './resolver';
 
 import { colors } from './colors';
-import { badge, button, textInput } from './components';
+import { alert, badge, button, textInput } from './components';
 
 const basic = createTheme({
   /* Always enable focus indicator even with mouse clicking for better accessability */
@@ -20,6 +20,6 @@ const basic = createTheme({
   defaultRadius: 'md',
 });
 
-export const theme = mergeThemeOverrides(basic, badge, button, textInput);
+export const theme = mergeThemeOverrides(basic, alert, badge, button, textInput);
 
 export const resolver = variablesResolver;

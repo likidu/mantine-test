@@ -1,4 +1,4 @@
-import { Anchor, Badge, Button, Input, Text, Title } from '@mantine/core';
+import { Alert, Anchor, Badge, Button, Text, Title } from '@mantine/core';
 import classes from './Welcome.module.css';
 
 export function Welcome() {
@@ -25,7 +25,9 @@ export function Welcome() {
         <Badge>A badge</Badge>
       </p>
       <p>
-        <Input />
+        <Alert variant="outline" title="This is alert" color="blue">
+          Hello
+        </Alert>
       </p>
     </>
   );

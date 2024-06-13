@@ -51,6 +51,9 @@ importers:
       '@storybook/theming':
         specifier: ^8.1.5
         version: 8.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@tabler/icons-react':
+        specifier: ^3.5.0
+        version: 3.5.0(react@18.2.0)
       '@testing-library/dom':
         specifier: ^9.3.4
         version: 9.3.4
@@ -1593,6 +1596,14 @@ packages:
 
   '@storybook/types@8.1.5':
     resolution: {integrity: sha512-/PfAZh1xtXN2MvAZZKpiL/nPkC3bZj8BQ7P7z5a/aQarP+y7qdXuoitYQ6oOH3rkaiYywmkWzA/y4iW70KXLKg==}
+
+  '@tabler/icons-react@3.5.0':
+    resolution: {integrity: sha512-bn05XKZV3ZfOv5Jr1FCTmVPOQGBVJoA4NefrnR919rqg6WGXAa08NovONHJGSuMxXUMV3b9Cni85diIW/E9yuw==}
+    peerDependencies:
+      react: '>= 16'
+
+  '@tabler/icons@3.5.0':
+    resolution: {integrity: sha512-I53dC3ZSHQ2MZFGvDYJelfXm91L2bTTixS4w5jTAulLhHbCZso5Bih4Rk/NYZxlngLQMKHvEYwZQ+6w/WluKiA==}
 
   '@testing-library/dom@9.3.4':
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
@@ -6923,6 +6934,13 @@ snapshots:
       '@storybook/channels': 8.1.5
       '@types/express': 4.17.21
       file-system-cache: 2.3.0
+
+  '@tabler/icons-react@3.5.0(react@18.2.0)':
+    dependencies:
+      '@tabler/icons': 3.5.0
+      react: 18.2.0
+
+  '@tabler/icons@3.5.0': {}
 
   '@testing-library/dom@9.3.4':
     dependencies:
