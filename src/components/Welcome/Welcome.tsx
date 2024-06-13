@@ -1,4 +1,5 @@
-import { Alert, Anchor, Badge, Button, Text, Title } from '@mantine/core';
+import { Badge, Button, Text, Title } from '@mantine/core';
+import { Anchor } from '../uikit';
 import classes from './Welcome.module.css';
 
 export function Welcome() {
@@ -13,7 +14,7 @@ export function Welcome() {
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
         This starter Vite project includes a minimal setup, if you want to learn more on Mantine +
         Vite integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/vite/" size="lg">
+        <Anchor href="https://mantine.dev/guides/vite/" size="lg" isExternal>
           this guide
         </Anchor>
         . To get started edit pages/Home.page.tsx file.
@@ -24,11 +25,7 @@ export function Welcome() {
       <p>
         <Badge>A badge</Badge>
       </p>
-      <p>
-        <Alert variant="outline" title="This is alert" color="blue">
-          Hello
-        </Alert>
-      </p>
+      <p></p>
     </>
   );
 }

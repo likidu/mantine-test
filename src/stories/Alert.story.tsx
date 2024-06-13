@@ -12,6 +12,7 @@ const meta: Meta<typeof Alert> = {
   args: {
     type: 'primary',
     title: 'This is alert',
+    withCloseButton: false,
   },
   argTypes: {
     type: {
@@ -23,6 +24,14 @@ const meta: Meta<typeof Alert> = {
         },
       },
     },
+    withCloseButton: {
+      control: 'boolean',
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
     title: {
       control: 'text',
       table: {
@@ -30,6 +39,11 @@ const meta: Meta<typeof Alert> = {
         defaultValue: {
           summary: '',
         },
+      },
+    },
+    children: {
+      table: {
+        disable: true,
       },
     },
   },

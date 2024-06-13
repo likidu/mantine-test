@@ -1,14 +1,6 @@
 import { MantineProvider, useMantineColorScheme } from '@mantine/core';
 import '@mantine/core/styles.css';
-import {
-  Controls,
-  Description,
-  DocsContainer,
-  Primary,
-  Stories,
-  Subtitle,
-  Title,
-} from '@storybook/blocks';
+import { Controls, Description, DocsContainer, Primary, Subtitle, Title } from '@storybook/blocks';
 import { addons } from '@storybook/preview-api';
 import { Preview } from '@storybook/react';
 import { themes } from '@storybook/theming';
@@ -47,6 +39,11 @@ export const decorators = [
 const preview: Preview = {
   parameters: {
     layout: 'centered',
+    options: {
+      storySort: {
+        method: 'alphabetical',
+      },
+    },
     docs: {
       container: (props) => {
         const [isDark, setDark] = useState(useDarkMode());
@@ -62,7 +59,7 @@ const preview: Preview = {
           <Description />
           <Primary />
           <Controls />
-          <Stories />
+          {/* <Stories /> */}
         </>
       ),
     },

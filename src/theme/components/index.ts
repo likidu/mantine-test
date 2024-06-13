@@ -1,4 +1,5 @@
 /* Universal */
+export * from './universal/anchor';
 export * from './universal/button';
 /* Entry */
 export * from './entry/textInput';

@@ -12,33 +12,23 @@ export const textInput = createTheme({
       classNames: classes,
 
       /* Override the sm, md, lg  */
-      vars: (_, props) => {
+      vars: (theme, props) => {
         if (props.size === 'sm') {
           return {
-            label: {
-              /* TODO: Override --mantine-font-size-lg globally. */
-              '--input-label-size': rem(12),
-              '--label-fz': rem(12),
-            },
             wrapper: {
+              /* TODO: Replace these values with CSS variables resolver values. */
               '--input-height': rem(28),
               '--input-padding-x': rem(8),
-              '--input-fz': rem(12),
             },
           };
         }
 
         if (props.size === 'md') {
           return {
-            label: {
-              /* TODO: Override --mantine-font-size-lg globally. */
-              '--input-label-size': rem(14),
-              '--label-fz': rem(14),
-            },
             wrapper: {
+              /* TODO: Replace these values with CSS variables resolver values. */
               '--input-height': rem(32),
               '--input-padding-x': rem(12),
-              '--input-fz': rem(14),
             },
           };
         }
@@ -46,19 +36,23 @@ export const textInput = createTheme({
         if (props.size === 'lg') {
           return {
             label: {
-              /* TODO: Override --mantine-font-size-lg globally. */
-              '--input-label-size': rem(14),
-              '--label-fz': rem(14),
+              '--input-label-size': theme.fontSizes.md,
+              '--label-fz': theme.fontSizes.md,
             },
             wrapper: {
+              /* TODO: Replace these values with CSS variables resolver values. */
               '--input-height': rem(40),
               '--input-padding-x': rem(12),
-              '--input-fz': rem(14),
+              '--input-fz': theme.fontSizes.md,
+            },
+            error: {
+              '--input-error-size': theme.fontSizes.sm,
+              '--input-error-fz': theme.fontSizes.sm,
             },
           };
         }
 
-        return { label: {}, wrapper: {} };
+        return { label: {}, wrapper: {}, error: {} };
       },
     }),
   },

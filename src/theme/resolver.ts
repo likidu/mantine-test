@@ -12,7 +12,9 @@ export const resolver: CSSVariablesResolver = (theme) => ({
   dark: {
     '--mantine-color-default-color': theme.colors.gray[7],
     /* By default, it uses [3] for the dark mode */
+    '--mantine-color-brand-text': theme.colors.brand[7],
     '--mantine-color-brand-light-color': theme.colors.brand[7],
+    '--mantine-color-brand-outline': theme.colors.brand[7],
     '--mantine-color-red-light-color': theme.colors.red[7],
   },
 });

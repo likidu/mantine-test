@@ -2,6 +2,7 @@ import {
   Alert as MantineAlert,
   AlertProps as MantineAlertProps,
   MantineColor,
+  useProps,
 } from '@mantine/core';
 import {
   IconAlertTriangle,
@@ -12,12 +13,19 @@ import {
 
 type AlertType = 'primary' | 'info' | 'success' | 'warning' | 'error';
 
-interface AlertProps extends Pick<MantineAlertProps, 'title' | 'icon'> {
+interface AlertProps extends Pick<MantineAlertProps, 'title' | 'icon' | 'withCloseButton'> {
   type?: AlertType;
   children: React.ReactNode;
 }
 
-export function Alert({ type = 'primary', children, title }: AlertProps) {
+const defaultProps: Partial<AlertProps> = {
+  type: 'primary',
+  withCloseButton: false,
+};
+
+export function Alert(props: AlertProps) {
+  const { type, children, title, withCloseButton } = useProps('Alert', defaultProps, props);
+
   interface AlertTypeMapping {
     color: MantineColor;
     icon: React.ReactNode;
@@ -32,10 +40,11 @@ export function Alert({ type = 'primary', children, title }: AlertProps) {
   };
   return (
     <MantineAlert
-      color={mapping[type].color}
+      color={mapping[type!].color}
       title={title}
-      icon={mapping[type].icon}
+      icon={mapping[type!].icon}
       radius={0}
+      withCloseButton={withCloseButton}
       mod={{ type }}
     >
       {children}

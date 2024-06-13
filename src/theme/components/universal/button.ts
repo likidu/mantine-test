@@ -12,13 +12,13 @@ export const button = createTheme({
       classNames: classes,
 
       /* Override the sm, md, lg  */
-      vars: (_, props) => {
+      vars: (theme, props) => {
         if (props.size === 'sm') {
           return {
             root: {
+              /* TODO: Replace these values with CSS variables resolver values. */
               '--button-height': rem(28),
               '--button-padding-x': rem(8),
-              '--button-fz': rem(12),
             },
           };
         }
@@ -26,9 +26,9 @@ export const button = createTheme({
         if (props.size === 'md') {
           return {
             root: {
+              /* TODO: Replace these values with CSS variables resolver values. */
               '--button-height': rem(32),
               '--button-padding-x': rem(12),
-              '--button-fz': rem(14),
             },
           };
         }
@@ -38,7 +38,7 @@ export const button = createTheme({
             root: {
               '--button-height': rem(40),
               '--button-padding-x': rem(12),
-              '--button-fz': rem(14),
+              '--button-fz': theme.fontSizes.md,
             },
           };
         }
