@@ -1,5 +1,31 @@
 import { MantineColorsTuple, MantineThemeColors, virtualColor } from '@mantine/core';
 
+const grayLight: MantineColorsTuple = [
+  '#FFFFFF',
+  '#FCFCFC',
+  '#F9F9F9',
+  '#F5F5F5',
+  '#ECECEC',
+  '#E6E6E6',
+  '#B3B3B3',
+  '#8C8C8C',
+  '#4D4D4D',
+  '#292929',
+];
+
+const grayDark: MantineColorsTuple = [
+  '#111111',
+  '#161616',
+  '#202020',
+  '#292929',
+  '#333333',
+  '#4D4D4D',
+  '#666666',
+  '#999999',
+  '#CCCCCC',
+  '#ECECEC',
+];
+
 const skyLight: MantineColorsTuple = [
   '#FAFDFF',
   '#F3FBFE',
@@ -53,6 +79,15 @@ const redDark: MantineColorsTuple = [
 ];
 
 export const colors: Partial<MantineThemeColors> = {
+  'gray-light': grayLight,
+  'gray-dark': grayDark,
+
+  gray: virtualColor({
+    name: 'gray',
+    light: 'gray-light',
+    dark: 'gray-dark',
+  }),
+
   'sky-light': skyLight,
   'sky-dark': skyDark,
 

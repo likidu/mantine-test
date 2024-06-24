@@ -7,10 +7,10 @@ export const resolver: CSSVariablesResolver = (theme) => ({
     '--mantine-color-focus-ring': theme.colors.brand[4],
   },
   light: {
-    '--mantine-color-default-color': theme.colors.gray[7],
+    '--mantine-color-default-color': theme.colors.gray[9],
   },
   dark: {
-    '--mantine-color-default-color': theme.colors.gray[7],
+    '--mantine-color-default-color': theme.colors.gray[9],
     /* By default, it uses [3] for the dark mode */
     '--mantine-color-brand-text': theme.colors.brand[7],
     '--mantine-color-brand-light-color': theme.colors.brand[7],

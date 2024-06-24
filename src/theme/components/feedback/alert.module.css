@@ -20,6 +20,14 @@
   }
 }
 
+.label {
+  font-size: var(--mantine-font-size-md);
+}
+
+.message {
+  font-size: var(--mantine-font-size-md);
+}
+
 .icon {
   margin-inline-end: var(--mantine-spacing-xs);
 }
